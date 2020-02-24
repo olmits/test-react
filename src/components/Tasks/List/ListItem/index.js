@@ -25,8 +25,6 @@ export default class ListItem extends Component {
 }
 
 ListItem.propTypes = {
-    id: PropTypes.number,
-    title: PropTypes.string,
     task: PropTypes.object,
     onTaskDelete: PropTypes.func
 }

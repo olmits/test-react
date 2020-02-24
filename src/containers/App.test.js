@@ -3,7 +3,10 @@ import { render } from '@testing-library/react';
 import App from './App';
 
 test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const { getByRole } = render(<App />);
+  const formElement = getByRole('form')
+  const tableElement = getByRole('table')
+  
+  expect(formElement).toBeInTheDocument();
+  expect(tableElement).toBeInTheDocument();
 });
